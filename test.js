@@ -3,7 +3,7 @@ function sumOfMultiples(p, q) {
 
     for (let x of p) {
         for (let y of q) {
-            if (y !== 0 && x % y === 0) {
+            if (x !== 0 && x % y === 0) {
                 sum += x;
                 break; 
             }

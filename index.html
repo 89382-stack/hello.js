@@ -1,4 +1,34 @@
-<html><head></head><body>
-   Hello World 
-   <script src="/hello.js/test.js"></script>
-</body></html>
+<html>
+   <head>
+     <title>Form Validation</title>
+   </head>
+   <body>
+   Hello World
+   <p id="Demo">Hello</p>
+   <form name="nameCard" onsubmit="return validateValues()" method="post">
+   Name:<input type="text" name="fname" id="fname"><br><br>
+   Age:<input type="number" name="age" id="age"><br><br>
+   <input type="submit" value="submit">
+   </form>
+   
+   <script>
+      document.getElementById("Demo").innerHTML="Programming Language";
+      function validateValues() {
+      let name = document.forms["nameCard"]["fname"].value;
+      let age = document.forms["nameCard"]["age"].value;
+      
+       if (name === "") {
+            alert("Name is required");
+            return false;
+        }
+
+        if (age === "" || age <= 0) {
+            alert("Enter a valid age");
+            return false;
+        }
+
+        return true; 
+      }
+      </script>
+</body>
+</html>
